@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Promise Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Background Animation -->
+    <div class="bg-hearts"></div>
+
+    <!-- Music Control -->
+    <div class="music-control" id="music-toggle">
+        <i class="fas fa-music"></i>
+    </div>
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Content Wrapper -->
+    <div class="main-wrapper">
+
+        <!-- Intro Section -->
+        <section id="intro" class="screen active">
+            <div class="content glass-card">
+                <h1 class="title">To My Love...</h1>
+                <p class="subtitle">A journey of promises, just for you.</p>
+                <div class="envelope-container" id="open-envelope">
+                    <div class="envelope">
+                        <div class="flap"></div>
+                        <div class="body"></div>
+                        <div class="letter">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <p class="click-hint">Click to Open</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promises Section -->
+        <section id="promises" class="screen hidden">
+            <h2 class="section-title">My Promises to You</h2>
+            <div class="cards-container">
+                <!-- Promise 1 -->
+                <div class="promise-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <h3>Promise #1</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>I promise to always be your safe place, your biggest fan, and your partner in every
+                                adventure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promise 2 -->
+                <div class="promise-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-smile-beam"></i>
+                            <h3>Promise #2</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>I promise to make you smile every single day, even when the world feels heavy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promise 3 -->
+                <div class="promise-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-infinity"></i>
+                            <h3>Promise #3</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>I promise to love you unconditionally, today, tomorrow, and forever.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="next-btn" onclick="scrollToSection('gallery')">Our Memories <i
+                    class="fas fa-arrow-down"></i></button>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="screen hidden">
+            <h2 class="section-title">Beautiful Moments</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="/promise_day_surprise/images/1.jpeg" alt="Memory 1"></div>
+                <div class="gallery-item"><img src="/promise_day_surprise/images/2.jpeg" alt="Memory 2"></div>
+                <div class="gallery-item"><img src="/promise_day_surprise/images/3.jpeg" alt="Memory 3"></div>
+                <div class="gallery-item"><img src="/promise_day_surprise/images/4.jpeg" alt="Memory 4"></div>
+                <div class="gallery-item"><img src="/promise_day_surprise/images/5.jpeg" alt="Memory 5"></div>
+                <!-- Add more real photos here -->
+            </div>
+            <button class="next-btn" onclick="scrollToSection('message')">Final Message <i
+                    class="fas fa-arrow-down"></i></button>
+        </section>
+
+        <!-- Final Message Section -->
+        <section id="message" class="screen hidden">
+            <div class="glass-card message-box">
+                <h2 class="final-title">Happy Promise Day!</h2>
+                <div id="typing-text"></div>
+                <button class="celebrate-btn" id="celebrate-btn">Celebrate Our Love 🎉</button>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <!-- Canvas for Confetti -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
